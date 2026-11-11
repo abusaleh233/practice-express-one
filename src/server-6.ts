@@ -109,7 +109,7 @@ app.get('/api/users/:id',async(req:Request,res:Response)=>{
     `,[id])
 
     if(result.rows.length === 0){
-       return res.status(500).json({
+       return res.status(404).json({
             success: false,
             message: "user not found ",
             data : {},
